@@ -1,0 +1,13 @@
+{
+  "routes":
+  [
+  	{ "path": "/", "callback": "application#index" },
+  	{ "path": "/login", "method": "post", "callback": "user#login" },
+    { "path": "/chatroom", "method": "get", "callback": "application#chatroom" },
+    { "path": "/logout", "method": "get", "callback": "user#logout" }
+  ],
+  "websockets":
+  [
+  	{ "event": "newCharMessage", "callback": "chatroom#receiveMessage"}
+  ]
+}
